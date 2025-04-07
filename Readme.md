@@ -237,7 +237,7 @@ text
 1. start Mage with the command `docker-compose up -d` (make sure to put the gcp service accoount credential  file in secrets or modify the docker compose for volume mapping:
 
 2. run the pipeline  `load_kaggle_export_bq` with the following link on your browser:
- `http://localhost:6789/pipelines/load_kaggle_export_bq `
+ `http://localhost:6789/pipelines/loadkaggleexportbq`
 
 
 ---
