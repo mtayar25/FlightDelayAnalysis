@@ -222,7 +222,8 @@ Created a dashboard for visualizing insights:
 
 
 ## 🔗 Setup Guide
-### in the root directory of the project add a directory called secrets and put inside the credentional for kaggle (kaggle.json) and Google CLoud
+
+### In the root directory of the project add a directory called secrets and put inside the credentional for kaggle (kaggle.json) and Google Cloud
 platform (gcp.json)
 
 ### Step 1: Terraform Setup
