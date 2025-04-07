@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mage:
+    image: mageai/mageai:latest
+    ports:
+      - "6789:6789"
+    volumes:
+      - ./mage-projects:/home/src  # Mount local project directory
+    environment:
+      - MAGE_PROJECT_NAME=my_project
+    command: ["/app/run_app.sh", "mage", "start", "my_project"]

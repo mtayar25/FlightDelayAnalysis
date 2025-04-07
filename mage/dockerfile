@@ -1,0 +1,11 @@
+# Use official Mage AI image as base
+FROM mageai/mageai:latest
+
+# Install dlt and GCS dependencies
+RUN pip install dlt[gcs] gcsfs pandas Kaggle pyarrow
+COPY /home/src/.kaggle/kaggle.json /root/.kaggle/kaggle.json
+RUN chmod 600 /root/.kaggle/kaggle.json
+
+
+# Optional: Install additional packages
+# RUN pip install google-cloud-storage psycopg2-binary

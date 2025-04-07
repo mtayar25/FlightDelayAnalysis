@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: raw_data  # Source name (logical name for your raw data)
+    database: pelagic-range-454520-i9  # Replace with your GCP project ID
+    schema: FlightDelayMT2025_dataset   # Schema where your raw tables are located
+    tables:
+      - name: flight_performance  # Name of the table in the schema
+        description: "Raw flight performance data"

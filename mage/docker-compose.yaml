@@ -1,0 +1,15 @@
+version: '3'
+services:
+  mage:
+    build: .  # Use custom Dockerfile below
+    ##env_file:
+    #  - .env  # Load environment variables
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/home/src/default_repo/gcp.json
+    volumes:
+      - ./mage_projects:/home/src  # For project files
+      - ../secrets/gcp.json:/home/src/default_repo/gcp.json:ro  # GCS service account key
+      - ../secrets/kaggle.json:/root/.config/kaggle/kaggle.json:ro  # Kaggle API key
+    ports:
+      - "6789:6789"
+   

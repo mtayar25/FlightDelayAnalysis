@@ -1,0 +1,11 @@
+version: '3'
+services:
+  dbt:
+    build: .
+    environment:
+      - GOOGLE_APPLICATION_CREDENTIALS=/app/gcp-key.json  # Path to GCP key inside container
+    volumes:
+      - .:/app  # Mount local project directory into container
+      - ../secrets/gcp.json:/app/gcp-key.json:ro  # Mount GCP key as read-only
+    command: >
+      dbt run --profiles-dir /app --models flight_performance  # Replace with your model name

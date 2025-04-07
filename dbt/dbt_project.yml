@@ -1,0 +1,16 @@
+name: flight_analysis_project
+version: 1.0.0
+config-version: 2
+
+profile: default  # Must match the profile name in profiles.yml
+
+model-paths: ["models"]
+target-path: "target"
+log-path: "logs"
+
+# Optional configurations for models
+models:
+  flight_performance:
+    +schema: FlightDelayMT2025_dataset
+    +alias: flight_performance
+    materialized: view

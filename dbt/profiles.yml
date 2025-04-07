@@ -1,0 +1,10 @@
+default:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: pelagic-range-454520-i9  # Replace with your GCP project ID
+      dataset: FlightDelayMT2025_dataset # Replace with your BigQuery dataset name
+      location: US  # Replace with your dataset's location
+      keyfile: /app/gcp-key.json  # Path to service account key inside the container
